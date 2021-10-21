@@ -11,6 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
 </head>
 
 <body>
@@ -53,9 +58,6 @@
         </div>
     </header>
     <div class="ht56 slider">
-        <video autoplay muted loop>
-            <source src="./production ID_4069480.mp4">
-        </video>
         <div class="container h-banner">
             <div class="txt-box">
                 <h3>제주신라호텔 <span>Members Only</span></h3>
@@ -68,6 +70,18 @@
             <div class="txt-box2">
                 <a href="#" class="package">패키지 바로가기 </a>
             </div>
+        </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/banner1.jpg" alt="1"></div>
+            <div class="swiper-slide"><img src="images/banner2.jpg" alt="1"></div>
+            <div class="swiper-slide"><img src="images/banner3.jpg" alt="1"></div>
+            <div class="swiper-slide"><img src="images/banner4.jpg" alt="1"></div>
+            <div class="swiper-slide"><img src="images/banner5.jpg" alt="1"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
         </div>
     </div>
     <section class="section01 container">
@@ -496,6 +510,24 @@
             <span> Copyright&copy;HOTEL SHILLA CO.KR.,LTD</span>
         </div>
     </div>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 30,
+          centeredSlides: true,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
 </body>
 
 </html>
